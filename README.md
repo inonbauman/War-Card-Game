@@ -1,4 +1,4 @@
-Card Game Project
+War card Game 
 This project is a simple card game implemented using HTML, CSS, and JavaScript. It allows players to flip cards and compete against the computer. The game follows the rules of comparing card values to determine the winner of each round.
 
 How to Play
@@ -20,4 +20,3 @@ script.js: The JavaScript file that contains the game logic and controls the gam
 deck.js: A JavaScript module that defines the Deck class and Card class used in the game.
 Game Logic
 The game logic is implemented in the script.js file. It includes functions for starting a new game, flipping cards, determining the round winner, and checking for the end of the game. The Deck class in the deck.js file handles the management of the cards and provides methods for shuffling the deck, popping cards from the top, and pushing cards to the bottom.
-
