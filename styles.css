@@ -1,0 +1,79 @@
+/* Set box-sizing for all elements */
+*, *::after, *::before { 
+  box-sizing: border-box;
+}
+
+/* Set styles for the body */
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 4rem);
+  grid-template-rows: 7rem 2rem 7rem;
+  gap: .5rem;
+  cursor: pointer;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+/* Styling for deck elements */
+.deck {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+}
+
+/* Styling for the text display */
+.text {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for cards */
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+/* Styling for red cards */
+.card.red {
+  color: red;
+}
+
+/* Styling for black cards */
+.card.black {
+  color: black;
+}
+
+/* Styling for card content */
+.card::before,
+.card::after {
+  position: absolute;
+  content: attr(data-value);
+  font-size: 1rem;
+}
+
+/* Styling for top-left value */
+.card::before {
+  top: .5rem;
+  left: .5rem;
+}
+
+/* Styling for bottom-right value */
+.card::after {
+  bottom: .5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
